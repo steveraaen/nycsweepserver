@@ -5,7 +5,7 @@ const app = express();
 require('dotenv').config()
 
 const fs = require('fs');
-const signFile = fs.readFileSync('../backend/dedupedBrooms.geojson');
+// const signFile = fs.readFileSync('../backend/dedupedBrooms.geojson');
 // const signsObj = JSON.parse(signFile);
 
 // console.log(signsObj[0][0])
@@ -18,7 +18,6 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // ------ Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
-// app.get("/", (req, res) => res.send("Express on Vercel"));
 const port = process.env.PORT || 5001;
 app.listen(port);
 console.log(`Listening on ${port}`);
