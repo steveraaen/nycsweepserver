@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const moment = require('moment')
 const Sign = require("../models/Allsigns.js");
 // console.log(Object.keys(Sign))
-const signFile = fs.readFileSync('../backend/dedupedBrooms.geojson');
-const signsObj = JSON.parse(signFile);
+// const signFile = fs.readFileSync('../backend/dedupedBrooms.geojson');
+// const signsObj = JSON.parse(signFile);
 
 mongoose.connect(process.env.ATLAS_URI, {
 }).then(function() {

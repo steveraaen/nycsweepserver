@@ -18,7 +18,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // ------ Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
-
+// app.get("/", (req, res) => res.send("Express on Vercel"));
 const port = process.env.PORT || 5001;
 app.listen(port);
 console.log(`Listening on ${port}`);
